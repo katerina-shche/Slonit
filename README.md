@@ -27,38 +27,38 @@
 
 ## 2. Основы Git
 ### 2.1. Конфигурация
-- *git config*
-- *git config user.name "Ekaterina Shchekotikhina"*
-- *git config user.email asti.katerina@gmail.com*
+- **git config**
+- **git config user.name "Ekaterina Shchekotikhina"**
+- **git config user.email asti.katerina@gmail.com**
 
 Эти настройи лучше делать глобальными, а не для каждого проекта:
 
-- *git config --global user.name "Ekaterina Shchekotikhina"*
-- *git config --global user.email asti.katerina@gmail.com*
-- *git config --global alias.sayhi '!echo "hello"; echo "from git"' (теперь можно использовать git sayhi)*
+- **git config --global user.name "Ekaterina Shchekotikhina"****
+- **git config --global user.email asti.katerina@gmail.com**
+- **git config --global alias.sayhi '!echo "hello"; echo "from git"' (теперь можно использовать git sayhi)**
 
 ### 2.2. Создание репозитория, первый коммит
-- *git init *
-- *git status*
-- *git add . | git add index.html *
-- *git commit -m 'here we write our commit message'* (флаг -m позволяет передавать описание комита сразу, а не добавлять его позднее в текстовом редакторе)
+- **git init**
+- **git status**
+- **git add . | git add index.html**
+- **git commit -m 'here we write our commit message'** (флаг -m позволяет передавать описание комита сразу, а не добавлять его позднее в текстовом редакторе)
 
 ### 2.3. Git и права на файлы
 
 Исполнимый (100644) и неисполнимый (100744) файл
 
-- *chmod +x index.html | chmod -x index.html*
+- **chmod +x index.html | chmod -x index.html**
 
 ### 2.4. Git show, кто такие авторы и коммитер
 
 Отображение информации по коммиту: 
 
-- *git show*
-- *git show --pretty=fuller*
+- **git show**
+- **git show --pretty=fuller**
 
 Изменение данных комитера: 
 
-- *git commit --author='Santa Clause <santa@me.com>' --date='01.01.2025'*
+- **git commit --author='Santa Clause \<santa@me.com\>' --date='01.01.2025'**
 
 ### 2.5. Добавление файлов и директорий, git status
 
@@ -66,12 +66,13 @@ git не умеет добавлять пустые дирректории (**gi
 
 Если случайно добавилив индекс ненужные фалы можно их убрать:
 
-- *git reset HEAD .DS_Store*
+- **git reset HEAD .DS_Store**
 
 в идеале добавлять ненужные файлы в .gitignore в корне проекта или на всем компьютере: 
 
-- *echo ".DS_Store" >> ~/.gitignore_global*
-- *git config --global core.excludesfile ~/.gitignore_global*
+- **echo ".DS_Store" >> ~/.gitignore_global**
+- **git config --global core.excludesfile ~/.gitignore_global**
+
 ### 2.6. Хороший коммит
 
 ***Atomic and consistent***
@@ -88,9 +89,9 @@ git не умеет добавлять пустые дирректории (**gi
 
 Двухступенчатая система сохранения, при этом мы можем выбрать не только  отдельные файлы или дирректории, но и отдельные фрагменты в рамках одного файла, если они были в разных локальных сохранениях <kbd>Command</kbd>+<kbd>S</kbd>, для этого используем флаг *-p*
 
-- *git add -p index.html*
+- **git add -p index.html**
 
-\```
+```
 ekaterina@Ekaterinas-MacBook-Air Slonit % git add -p hello.html
 diff --git a/hello.html b/hello.html
 index 30f25bf..87552ca 100644
@@ -106,12 +107,12 @@ index 30f25bf..87552ca 100644
      </header>
      <main>
 (1/2) Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]?
-\```
+```
 
 выбираем опции **y = yes**, **n=no**, затем переходим к следующему фрагменту кода.
 **?=** показать значение всех опций
 
-\```
+```
 @@ -21,7 +21,6 @@
      <script>
          helloGitty();
@@ -123,7 +124,7 @@ index 30f25bf..87552ca 100644
  </html>
 \ No newline at end of file
 (2/2) Stage this hunk [y,n,q,a,d,K,g,/,e,?]? n
-\```
+```
 
 ### 2.8. Комиты без git add
 ### 2.9. Удаление и переименование файлов
