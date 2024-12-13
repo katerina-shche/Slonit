@@ -5,7 +5,6 @@ function startNumberGuessingGame(min, max) {
     let theGuess = null;
     console.log(`Компьютер №1: "Я загадал число от ${min} до ${max}"`);
     console.log(`Компьютер №1: "Попробуй угадать его!"`);
-    console.log(`пс.. это ${theNumber}`);
 
 
     while (theGuess !== theNumber) {
