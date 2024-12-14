@@ -38,6 +38,9 @@
 - **git config --global user.email asti.katerina@gmail.com**
 - **git config --global alias.sayhi '!echo "hello"; echo "from git"' (теперь можно использовать git sayhi)**
 
+Если это важно, то можно переименовать основную ветку из *master* в *main*:
+- **git branch -M main**
+
 ### 2.2. Создание репозитория, первый коммит
 - **git init**
 - **git status**
