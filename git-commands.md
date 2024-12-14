@@ -1,5 +1,4 @@
 # Git 
----
 ## 1. Введение
 ### 1.1. Что такое Git? 
 
@@ -160,3 +159,4 @@ index 30f25bf..87552ca 100644
 - `git rm -f index.html`
 
 ![git logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1920px-Git-logo.svg.png)
+---
