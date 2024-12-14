@@ -1,4 +1,9 @@
 # Git 
+
+1. [Введение](#1-введение)
+1.1 [Что такое Git?](#11-что-такое-git)
+1.1.1 [Установка Git](#111-установка-git)
+
 ## 1. Введение
 ### 1.1. Что такое Git? 
 
@@ -13,7 +18,7 @@
 
 [Подробный тьюториал тут](https://www.youtube.com/watch?v=W4hoc24K93E&list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb&index=2 "видео на ютюб")
 
-#### Установка Git
+#### 1.1.1. Установка Git
 
 - Linux:
     - apt-get install git
