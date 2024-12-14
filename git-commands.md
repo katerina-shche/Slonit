@@ -178,10 +178,11 @@ index 30f25bf..87552ca 100644
 ## 3. Ветки
 ### 3.1. Создание и переключение  
 
--`git branch -m <main>` - ереименовываем основную ветку если нужно, *main* это классика, иногда это может быть *trunck* | *development*
--`git branch -v` - возвращает название текущей ветки + на сколько комитов она опережает удаленный репозиторий + название последнего коммита в ней
--`git branch <newbranchname>` - создание новой ветки с именем *newbranchname*
--`git checkout <existingbranchname>` - переключаемся с текущей ветки на ветку с именем *existingbranchname*
+- `git branch -m <main>` - переименовываем основную ветку если нужно, *main* это классика, иногда это может быть *trunck* | *development*
+- `git branch -v` - возвращает название текущей ветки + на сколько комитов она опережает удаленный репозиторий + название последнего коммита в ней
+- `git branch <newbranchname>` - создание новой ветки с именем *newbranchname*
+- `git checkout <existingbranchname>` - переключаемся с текущей ветки на ветку с именем *existingbranchname*
+- `git checkout -b <newbranchname> =  git branch + git checkout - создает новую ветку с именем *newbranchname* и сразу на нее переключается
   
 
 
