@@ -181,6 +181,8 @@ index 30f25bf..87552ca 100644
 Переименовываем основную ветку если нужно 
 
 -`git branch -m main` - main это классика, иногда это может быть *trunck* | *development*
+- `git branch -v` - возвращает название текущей ветки + на сколько комитов она опережает удаленный репозиторий + название последнего коммита в ней
+  
 
 
 ![git logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1920px-Git-logo.svg.png)
