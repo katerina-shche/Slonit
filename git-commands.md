@@ -1,5 +1,4 @@
 # Git 
-![git logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1920px-Git-logo.svg.png)
 ---
 ## 1. Введение
 ### 1.1. Что такое Git? 
@@ -28,41 +27,38 @@
 
 ## 2. Основы Git
 ### 2.1. Конфигурация
-- **git config**
-- **git config user.name "Ekaterina Shchekotikhina"**
-- **git config user.email asti.katerina@gmail.com**
+- `git config`
+- `git config user.name "Ekaterina Shchekotikhina"`
+- `git config user.email asti.katerina@gmail.com`
 
 Эти настройки лучше делать глобальными, а не для каждого проекта:
 
-- **git config --global user.name "Ekaterina Shchekotikhina"****
-- **git config --global user.email asti.katerina@gmail.com**
-- **git config --global alias.sayhi '!echo "hello"; echo "from git"' (теперь можно использовать git sayhi)**
-
-Если это важно, то можно переименовать основную ветку из *master* в *main*:
-- **git branch -M main**
+- `git config --global user.name "Ekaterina Shchekotikhina"`
+- `git config --global user.email asti.katerina@gmail.com`
+- `git config --global alias.sayhi '!echo "hello"; echo "from git"' (теперь можно использовать git sayhi)`
 
 ### 2.2. Создание репозитория, первый коммит
-- **git init**
-- **git status**
-- **git add . | git add index.html**
-- **git commit -m 'here we write our commit message'** (флаг -m позволяет передавать описание комита сразу, а не добавлять его позднее в текстовом редакторе)
+- `git init`
+- `git status`
+- `git add .` | `git add index.html`
+- `git commit -m 'here we write our commit message'` (флаг **-m** позволяет передавать описание комита сразу, а не добавлять его позднее в текстовом редакторе)
 
 ### 2.3. Git и права на файлы
 
 Исполнимый (100644) и неисполнимый (100744) файл
 
-- **chmod +x index.html | chmod -x index.html**
+- `chmod +x index.html | chmod -x index.html`
 
 ### 2.4. Git show, кто такие авторы и коммитер
 
 Отображение информации по коммиту: 
 
-- **git show**
-- **git show --pretty=fuller**
+- `git show`
+- `git show --pretty=fuller`
 
 Изменение данных комитера: 
 
-- **git commit --author='Santa Clause \<santa@me.com\>' --date='01.01.2025'**
+- `git commit --author='Santa Clause \<santa@me.com\>' --date='01.01.2025'`
 
 ### 2.5. Добавление файлов и директорий, git status
 
@@ -70,12 +66,12 @@ git не умеет добавлять пустые дирректории (**gi
 
 Если случайно добавили в индекс ненужные фалы можно их убрать:
 
-- **git reset HEAD .DS_Store**
+- `git reset HEAD .DS_Store`
 
 в идеале добавлять ненужные файлы в .gitignore в корне проекта или на всем компьютере: 
 
-- **echo ".DS_Store" >> ~/.gitignore_global**
-- **git config --global core.excludesFile ~/.gitignore_global**
+- `echo ".DS_Store" >> ~/.gitignore_global`
+- `git config --global core.excludesFile ~/.gitignore_global`
 
 ### 2.6. Хороший коммит
 
@@ -95,7 +91,7 @@ git не умеет добавлять пустые дирректории (**gi
 
 Двухступенчатая система сохранения, при этом мы можем выбрать не только  отдельные файлы или дирректории, но и отдельные фрагменты в рамках одного файла, если они были в разных локальных сохранениях <kbd>Command</kbd>+<kbd>S</kbd>, для этого используем флаг *-p*
 
-- **git add -p index.html**
+- `git add -p index.html`
 
 ```zsh
 ekaterina@Ekaterinas-MacBook-Air Slonit % git add -p hello.html
@@ -140,7 +136,7 @@ index 30f25bf..87552ca 100644
 
 или можно быстро закомитить отдельный файл указав его путь 
 
-- **git commit -m 'сообщение с описанием коммита' .index.html**
+- `git commit -m 'сообщение с описанием коммита' .index.html`
 
 Важно: эти два варианта не добавят изменения из файлов, которые игнорируются гитом и не были ранее проиндексированы
 
@@ -148,7 +144,7 @@ index 30f25bf..87552ca 100644
 
 Также можно сделать свой alias: 
 
-- **alias.commitall '!git add .; git commit'**
+- `alias.commitall '!git add .; git commit'`
 
 Важно поддерживать атомарность комита, т.е. комитить всё имеет смысл только, если добавление какой-то функциональности затронуло несколько файлов. 
 
@@ -158,9 +154,9 @@ index 30f25bf..87552ca 100644
 удаление файла - добавляем и коммитим также как и изменения в нем.
 переименование = удаление старого файла и создание нового 
 
-- **git rm -r src** = git -r src + git add src 
-- **git rm -r src --cashed** - удаляет из индекса, но оставляет в рабочей дирректории и делает файл/директорию неотслеживаемым/ой
+- `git rm -r src` = `git -r src + git add src `
+- `git rm -r src --cashed` - удаляет из индекса, но оставляет в рабочей дирректории и делает файл/директорию неотслеживаемым/ой при попытке удалить файл, который несохранен нигде git выдает предупрежнения для предотвращения безвозвратной потери данных. Это можно игнорировать,  используя флаг -f (forse)
 
-при попытке удалить файл, который несохранен нигде git выдает предупрежнения для предотвращения безвозвратной потери данных. Это можно игнорировать,  используя флаг -f (forse)
+- `git rm -f index.html`
 
-- **git rm -f index.html**
+![git logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1920px-Git-logo.svg.png)
