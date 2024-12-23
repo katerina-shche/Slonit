@@ -279,7 +279,7 @@ Aborting
 -`cat .git/logs/HEAD` - выводит все reference logs для HEAD (тоже самое можно вывести для любой ветки), там можно увидить все переключения, номера коммитов и выполненые команды;
 - `git reflog` - выводит reflog для HEAD в более оформленном сокращенном виде и в обратном порядке со ссылками типа `HEAD@{3}`;
 - `git reflog <branchname>` - тоже самое для веток;
-- `git branch <branch1name> <branch2name>@{1} - создасть ветку <branch1name> на комите6 соответствующему <branch2name>@{1} в `git reflog <branch2name>` удобно для восстановления после удаления;
+- `git branch <branch1name> <branch2name>@{1}` - создасть ветку <branch1name> на комите6 соответствующему <branch2name>@{1} в `git reflog <branch2name>` удобно для восстановления после удаления;
 
 ![git logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1920px-Git-logo.svg.png)
 ---
